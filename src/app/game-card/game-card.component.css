@@ -39,3 +39,16 @@
     align-items: center;
     color: #fff;
 }
+@media (max-width: 1220px) {
+    .game-card {
+        padding: 1rem;
+    }
+}
+@media (max-width: 970px) {
+    .game-card {
+        padding: 1rem;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+}

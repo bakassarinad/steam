@@ -5,10 +5,12 @@ import { LibraryComponent } from './library/library.component';
 import { GameListComponent } from './game-list/game-list.component';
 import { GameDetailsComponent } from './game-details/game-details.component';
 import { LoginComponent } from './login/login.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 
 const routes: Routes = [
   {path: "", redirectTo: "/home-page", pathMatch: "full"},
+  {path: "admin", component: AdminPanelComponent},
   {path: "home-page", component: HomePageComponent},
   {path: "library", component: LibraryComponent, children: [
   {path: ":path", component: GameListComponent},

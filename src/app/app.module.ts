@@ -10,7 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { GameListComponent } from './game-list/game-list.component';
 import { GameCardComponent } from './game-card/game-card.component';
 import { GameDetailsComponent } from './game-details/game-details.component';
-import { LoginComponent } from './login/login.component'
+import { LoginComponent } from './login/login.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LoginComponent } from './login/login.component'
     GameListComponent,
     GameCardComponent,
     GameDetailsComponent,
-    LoginComponent
+    LoginComponent,
+    AdminPanelComponent
   ],
   imports: [
     BrowserModule,

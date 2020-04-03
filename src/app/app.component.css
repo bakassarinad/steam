@@ -28,3 +28,15 @@ a:hover:not(.disabled):not(.active) {
 .active {
     color: #55A6F4;
 }
+@media (max-width: 1220px) {
+    .header {
+        padding: 0 2rem;
+    }
+}
+@media (max-width: 970px) {
+    .header {
+        padding: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+}
