@@ -1,0 +1,39 @@
+<div class="login">
+    <div class="login_card">
+        <div *ngIf="login == true">
+            <div class="login_card__title">Log in</div>
+            <form>
+                <div class="input_item">
+                    <label>Email</label>
+                    <input type="email">
+                </div>
+                <div class="input_item">
+                    <label>Password</label>
+                    <input type="password">
+                </div>
+                <button>Login</button>
+            </form>
+            <div class="selector" (click)="login = false">Нет аккаунта? Зарегайся!</div>
+        </div>
+        <!---->
+        <div *ngIf="login == false">
+            <div class="login_card__title">Sign up</div>
+            <form>
+                <div class="input_item">
+                    <label>Email</label>
+                    <input type="email">
+                </div>
+                <div class="input_item">
+                    <label>Password</label>
+                    <input type="password">
+                </div>
+                <div class="input_item">
+                    <label>Confirm password</label>
+                    <input type="password">
+                </div>
+                <button>Signup</button>
+            </form>
+            <div class="selector" (click)="login = true">Уже есть аккаунт, войди!</div>
+        </div>
+    </div>
+</div>

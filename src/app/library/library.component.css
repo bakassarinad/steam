@@ -1,0 +1,6 @@
+.lib {
+    padding: 3rem 10rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 3rem;
+}

@@ -1,0 +1,30 @@
+.game-details_title {
+    text-transform: capitalize;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 2rem;    
+}
+.game-details_text {
+    display: grid;
+    grid-gap: 1rem;
+    margin-top: 2rem;
+}
+.game-detail_text__title {
+    line-height: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+.game-detail_text__text {
+    color: #acacac;
+    font-size: 14px;
+}
+.game-detail_screenshots {
+    display: grid;
+    grid-gap: 1rem;
+}
+.game-detail_screenshots img {
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
+}

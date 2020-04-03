@@ -1,0 +1,18 @@
+<div class="game-details">
+    <div class="game-details_title">{{gameDetails.category}}</div>
+    <app-game-card [game]="gameDetails"></app-game-card>
+    <div class="game-details_text">
+        <div *ngFor="let t of gameText">
+            <div class="game-detail_text__title">{{gameTextTitles[gameText.indexOf(t)]}}</div>
+            <div class="game-detail_text__text">
+                {{t}}
+            </div>
+        </div>
+        <div class="game-detail_text__title">Скриншоты</div>
+        <div class="game-detail_screenshots">
+            <div *ngFor="let s of screenshots">
+                <img src="{{s}}" alt="">
+            </div>
+        </div>
+    </div>
+</div>

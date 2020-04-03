@@ -1,0 +1,9 @@
+<div class="homepage">
+    <img src="assets/img/Logo.png" alt="">
+    <div class="homepage_content">
+        <!-- <div class="homepage_title">Most popular</div> -->
+        <div *ngFor="let g of games">
+            <app-game-card [game]="g"></app-game-card>
+        </div>
+    </div>
+</div>
