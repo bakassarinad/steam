@@ -3,37 +3,37 @@
         <div class="title">New game admin panel</div>
         <div class="item">
             <div class="item_text">Name</div>
-            <input type="text">
+            <input type="text" name="name" [(ngModel)]="gameModel.name">
         </div>
         <div class="item">
             <div class="item_text">Desc</div>
-            <input type="text">
+            <input type="text" name="description" [(ngModel)]="gameModel.description">
         </div>
         <div class="item">
             <div class="item_text">Price</div>
-            <input type="text">
+            <input type="text" name="price" [(ngModel)]="gameModel.price">
         </div>
         <div class="item">
             <div class="item_text">Main image</div>
-            <input type="text">
+            <input type="text" name="image" [(ngModel)]="gameModel.image">
         </div>
         <hr />
         <div class="item">
             <div class="item_text">First image</div>
-            <input type="text">
+            <input type="text" name="screenshots" [(ngModel)]="gameModel.screenshots[0]">
         </div>
         <div class="item">
             <div class="item_text">Second image</div>
-            <input type="text">
+            <input type="text" name="screenshots" [(ngModel)]="gameModel.screenshots[1]">
         </div>
         <div class="item">
             <div class="item_text">Third image</div>
-            <input type="text">
+            <input type="text" name="screenshots" [(ngModel)]="gameModel.screenshots[2]">
         </div>
         <hr />
         <div class="item">
             <div class="item_text">Text</div>
-            <textarea cols="30" rows="10"></textarea>
+            <textarea cols="30" rows="10" name="text" [(ngModel)]="gameModel.text"></textarea>
         </div>
         <button>Add new game</button>
     </form>

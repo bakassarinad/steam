@@ -1,24 +1,20 @@
 import { Injectable } from '@angular/core';
+import { User } from './user'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { IGames } from './games';
 
 @Injectable({
   providedIn: 'root'
 })
-export class GamesService {
-  private url: string = "assets/data/games.json"
+export class UserService {
+  _url = 'django/user/' 
   headers = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
-  
   constructor(private http: HttpClient) { }
 
-  getGames(): Observable<IGames[]> {
-    return this.http.get<IGames[]>(this.url)
+  Auth(user: User): Observable<User> {
+    return this.http.post<User>(this._url, user, this.headers)
   }
-
-  create(game): Observable<IGames> {
-    return this.http.post<IGames>(this.url, game, this.headers)
-  }
+  k
 }

@@ -12,6 +12,7 @@ import { GameCardComponent } from './game-card/game-card.component';
 import { GameDetailsComponent } from './game-details/game-details.component';
 import { LoginComponent } from './login/login.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

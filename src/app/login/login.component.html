@@ -5,13 +5,13 @@
             <form>
                 <div class="input_item">
                     <label>Email</label>
-                    <input type="email">
+                    <input type="email" name="email" [(ngModel)]="userModel.email">
                 </div>
                 <div class="input_item">
                     <label>Password</label>
-                    <input type="password">
+                    <input type="password" name="password" [(ngModel)]="userModel.password">
                 </div>
-                <button>Login</button>
+                <button (click)="onSubmit()">Login</button>
             </form>
             <div class="selector" (click)="login = false">Нет аккаунта? Зарегайся!</div>
         </div>
@@ -21,17 +21,17 @@
             <form>
                 <div class="input_item">
                     <label>Email</label>
-                    <input type="email">
+                    <input type="email" name="email" [(ngModel)]="userModel.email">
                 </div>
                 <div class="input_item">
                     <label>Password</label>
-                    <input type="password">
+                    <input type="password" name="password" [(ngModel)]="userModel.password">
                 </div>
                 <div class="input_item">
                     <label>Confirm password</label>
-                    <input type="password">
+                    <input type="password" name="password2" [(ngModel)]="userModel.password2">
                 </div>
-                <button>Signup</button>
+                <button (click)="onSubmit()">Signup</button>
             </form>
             <div class="selector" (click)="login = true">Уже есть аккаунт, войди!</div>
         </div>
