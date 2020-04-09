@@ -7,10 +7,10 @@ import { UserService } from '../user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  login: boolean = true
+  login = true;
   userModel = {
     email: '', password: '', password2: ''
-  }
+  };
 
   constructor(private userService: UserService) { }
 
@@ -18,7 +18,12 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.userModel)
-    this.userService.Auth(this.userModel)
+    console.log(this.userModel);
+    if (this.login) {
+      this.userService.Login(this.userModel);
+    } else {
+      this.userService.Register(this.userModel);
+    }
+
   }
 }
