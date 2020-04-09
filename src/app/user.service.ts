@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from './user'
+import { User } from './user';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -7,14 +7,18 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  _url = 'django/user/' 
+  // tslint:disable-next-line:variable-name
+  _url = 'django/user/'
   headers = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
   constructor(private http: HttpClient) { }
 
-  Auth(user: User): Observable<User> {
-    return this.http.post<User>(this._url, user, this.headers)
+  Login(user: User): Observable<User> {
+    return this.http.post<User>(this._url + 'login/', user, this.headers);
   }
-  k
+  Register(user: User): Observable<User> {
+    return this.http.post<User>(this._url + 'register/', user, this.headers);
+  }
 }
+
