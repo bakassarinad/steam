@@ -35,6 +35,6 @@
             <div class="item_text">Text</div>
             <textarea cols="30" rows="10" name="text" [(ngModel)]="gameModel.text"></textarea>
         </div>
-        <button>Add new game</button>
+        <button (click)="onSubmit()">Add new game</button>
     </form>
 </div>
