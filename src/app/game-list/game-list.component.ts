@@ -16,7 +16,8 @@ export class GameListComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.gamesService.getGames()
         .subscribe(data => {
-          this.games = data.filter(o => o.category == params.path)
+          this.games = data.filter(o => o.category.name.toLowerCase() == params.path)
+          console.log(params.path)
           this.title = params.path
         })
     });
@@ -24,7 +25,6 @@ export class GameListComponent implements OnInit {
 
   gameDetails(path, id) {
     this.router.navigate(['/library/' + path + '/game-details/' + id])
-    // console.log('/library/' + path + '/game-details/' + id)
   }
 
 }

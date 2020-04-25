@@ -1,10 +1,14 @@
 export interface IGames {
-    id: string,
+    id: number,
     name: string,
     description: string,
     image: string,
-    category: string,
+    category: {
+        id: number,
+        name: string
+    }
     price: string,
     text: string,
-    screenshots: string
+    screenshots: string,
+    cat: string
 }

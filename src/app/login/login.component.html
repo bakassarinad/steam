@@ -4,14 +4,14 @@
             <div class="login_card__title">Log in</div>
             <form>
                 <div class="input_item">
-                    <label>Email</label>
-                    <input type="email">
+                    <label>username</label>
+                    <input type="username" name="username" [(ngModel)]="userModel.username">
                 </div>
                 <div class="input_item">
                     <label>Password</label>
-                    <input type="password">
+                    <input type="password" name="password" [(ngModel)]="userModel.password">
                 </div>
-                <button>Login</button>
+                <button (click)="onSubmit()">Login</button>
             </form>
             <div class="selector" (click)="login = false">Нет аккаунта? Зарегайся!</div>
         </div>
@@ -20,18 +20,18 @@
             <div class="login_card__title">Sign up</div>
             <form>
                 <div class="input_item">
-                    <label>Email</label>
-                    <input type="email">
+                    <label>username</label>
+                    <input type="username" name="username" [(ngModel)]="userModel.username">
                 </div>
                 <div class="input_item">
                     <label>Password</label>
-                    <input type="password">
+                    <input type="password" name="password" [(ngModel)]="userModel.password">
                 </div>
                 <div class="input_item">
                     <label>Confirm password</label>
-                    <input type="password">
+                    <input type="password" name="password2" [(ngModel)]="userModel.password2">
                 </div>
-                <button>Signup</button>
+                <button (click)="onSubmit()">Signup</button>
             </form>
             <div class="selector" (click)="login = true">Уже есть аккаунт, войди!</div>
         </div>

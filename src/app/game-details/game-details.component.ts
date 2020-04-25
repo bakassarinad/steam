@@ -10,17 +10,34 @@ import { ActivatedRoute } from '@angular/router';
 export class GameDetailsComponent implements OnInit {
   public gameDetails
   public gameText = []
+  public commentList = []
   public screenshots = []
   public gameTextTitles = ['Об игре', 'Минимальные требования', 'Еще какой-то текст']
   constructor(private gamesService: GamesService, private route: ActivatedRoute) { }
   public id = this.route.snapshot.paramMap.get("id")
+
+  commentModel = {
+    username: '',
+    text: '',
+    id: 0,
+    rating: 0
+  }
+
   ngOnInit(): void {
-    this.gamesService.getGames()
-      .subscribe(data => {
-        this.gameDetails = data.find(o => o.id == this.id)
-        this.gameText = this.gameDetails.text.split('~')
-        this.screenshots = this.gameDetails.screenshots
-      })
+    this.gamesService.getGame(this.id).subscribe(game => {
+      this.gameDetails = game
+      this.gameText = this.gameDetails.text.split('~')
+    })
+
+    this.gamesService.getComments().subscribe(data => {
+      this.commentList = data.filter(o => o.game.id == this.gameDetails.id)
+      console.log(this.commentList)
+    })
+  }
+
+  leaveComment() {
+    this.commentModel.id = this.gameDetails.id
+    this.gamesService.setComment(this.commentModel).subscribe()
   }
 
 }
